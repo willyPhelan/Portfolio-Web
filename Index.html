@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio Web de Guillermo Phelan </title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- ================= 1. MENÚ ================= -->
+
+    <header class="header">
+
+        <nav class="nav-container">
+
+          <!----  <a href="#inicio" class="logo">Guillermo Phelan - Desarrollador FullStack</a> -->
+
+            <!-- Checkbox oculto para el menú hamburguesa puramente en CSS -->
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <label for="menu-toggle" class="hamburger">
+
+                <span> </span>
+
+                <span> </span>
+
+                <span> </span>
+           
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+
+                <li><a href="#conocimientos">Conocimientos</a></li>
+
+                <li><a href="#proyectos">Proyectos</a></li>
+
+                <li><a href="#redes">Redes</a></li>
+
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ================= 2. PRESENTACIÓN INICIAL ================= -->
+
+        <section id="inicio" class="hero">
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="hero-video">
+
+        <source src="vids/videoprog.mp4" type="video/mp4">
+
+        Tu navegador no soporta videos HTML5.
+  
+    </video>
+
+    <!-- Capa oscura semitransparente para que el texto y foto resalten -->
+    <div class="hero-overlay"></div>
+
+    <!-- Tu contenido intacto -->
+    <div class="hero-content">
+
+        <div class="hero-img-container">
+
+            <img src="imgs\willy.jpg" alt="Foto de perfil de Guillermo Phelan" class="hero-img">
+
+        </div>
+        
+        <div class="hero-text">
+
+            <h1>Guillermo Phelan</h1>
+
+            <h2> Desarrollador Fullstack </h2>
+
+            <p>Sumergido en el mundo del desarrollo de software, cuento con una sólida base técnica en C++, C#, JavaScript y SQL, respaldada por mi formación universitaria en programación. Combino los fundamentos de la ingeniería de software con las tecnologías más demandadas del mercado para construir aplicaciones robustas y de alto rendimiento. Te invito a explorar mis proyectos y habilidades; ¡Construyamos grandes cosas juntos!</p>
+            
+            <div class="hero-buttons">
+
+                <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+
+                <a href="docs/Guillermo Phelan DEV 2026-06.pdf" class="btn btn-secondary" download>Descargar CV</a>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+        <!-- ================= 3. INFORMACIÓN GENERAL (SOBRE MÍ) ================= -->
+
+        <section id="sobre-mi" class="section about">
+
+            <div class="container">
+              
+
+                <!-- Datos rápidos -->
+                <div class="about-grid">
+
+                    <div class="info-card">
+
+                        <h3> 🗺️ Buenos Aires, Argentina </h3>
+               
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>🗣️ Idiomas: Español - Inglés C2 </h3>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>🎓 Educación: Universidad Tecnológica Nacional FRGP - Técnico  Universitario en Programación </h3>
+                 
+                    </div>
+               
+                </div>        
+               
+            </div>
+
+        </section>
+
+        <!-- ================= 4. CONOCIMIENTOS ================= -->
+
+        <section id="conocimientos" class="section skills">
+
+            <div class="container">
+
+              
+              <div class="skills-card">
+
+                <h2> Skills </h2>
+                
+              
+                <div class="tech-icons">
+
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/960px-Logo_C_sharp.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="C#" class="tech-logo">
+                   
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1920px-ISO_C%2B%2B_Logo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="C++" class="tech-logo">
+                    
+                    <img src="https://cdn-icons-png.flaticon.com/512/12658/12658403.png" alt="SQL" class="tech-logo">
+                   
+                    <img src="https://icones.pro/wp-content/uploads/2021/05/icone-html-bleue.png" alt="Node.js" class="tech-logo">
+                    
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/960px-CSS3_logo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Node.js" class="tech-logo">                    
+                                     
+                    <img src="https://www.yourtechstory.com/wp-content/uploads/2019/08/sql.png" alt="Node.js" class="tech-logo">
+
+                    <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/github.png" alt="img" class="tech-logo">
+
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/1280px-Visual_Studio_Code_1.18_icon.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="IMG" class="tech-logo">
+
+                    <img src=" https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBQk4Fgd0cYavEztNLFcVkRBRvOZ40AdH17uQXVRXdtvNuXjTF6d4SVvTokMOzHlFurktQtIwTW_ULiDeOD9ge8Q-&format=source
+                        " alt="Node.js" class="tech-logo">
+                    
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/3840px-Microsoft_.NET_logo.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="Node.js" class="tech-logo">
+
+                    <img src="https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg" alt="Node.js" class="tech-logo">
+
+                    <img src="https://icones.pro/wp-content/uploads/2022/07/icone-angulaire-bleu.png" alt="Node.js" class="tech-logo">
+
+                    <img src="https://brandlogos.net/wp-content/uploads/2025/10/docker_mark-logo_brandlogos.net_yetav-512x404.png" alt="Node.js" class="tech-logo">
+
+
+                </div>
+        
+            </div>
+
+                   
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </section>
+
+       <!-- ================= 5. PROYECTOS ================= -->
+
+<section id="proyectos" class="section projects">
+
+    <div class="container">
+
+        <!-- Menú desplegable nativo -->
+
+        <details class="projects-dropdown">
+
+            <summary class="dropdown-toggle-btn">
+
+                <span>Ver proyectos destacados </span>
+
+                <span class="arrow-icon">&#9660;</span>
+
+            </summary>
+
+            <div class="projects-grid featured-grid" style="margin-top: 1.5rem;">
+
+                <!-- Proyecto 1 -->
+
+                <article class="project-card featured">
+
+                    <h4>Spotify Clone</h4>
+
+                    <div class="project-img-placeholder" style="background-color: #262c40;">
+
+                        <div class="project-gallery">
+
+                            <img src="imgs/Spotify.png" alt="Spotify Clone 1">
+
+                            <img src="imgs/Spotify3.png" alt="Spotify Clone 2">
+
+                            <img src="imgs/spotify2.png" alt="Spotify Clone 3">
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+                    
+                        <p>App clon de Spotify utilizando REACT, Material UI, Styled components, Redux y llamadas a la API para darle funcionalidad.</p>
+                        
+                        <a href="https://github.com/willyPhelan/Spotify-Clon_React-Redux" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                    
+                    </div>
+               
+                </article>
+
+              
+              
+                <!-- Proyecto 2 -->
+
+
+                <article class="project-card featured">
+                    <h4>Mercado Libre Clone</h4>
+                    <div class="project-img-placeholder" style="background-color: #262c40;">
+                        <div class="project-gallery">
+                            <img src="imgs/ClonMeli.png" alt="Mercado Libre 1">
+                            <img src="imgs/meli3.png" alt="Mercado Libre 2">
+                            <img src="imgs/meli2.png" alt="Mercado Libre 3">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p>Clon de la página de Mercado Libre donde muestra un producto con su precio, detalles, información del vendedor, barra de navegación y más. Desarrollada a partir del desafío planteado por reclutadores de la empresa para postulantes al puesto de desarrollador Front-End.</p>
+                        <a href="https://github.com/willyPhelan/Clon-Mercado-Libre" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card featured">
+                    <h4>Tienda Virtual</h4>
+                    <div class="project-img-placeholder" style="background-color: #262c40;">
+                        <div class="project-gallery">
+                            <img src="imgs/ecommerce.png" alt="Tienda Virtual 1">
+                            <img src="imgs/ecommerce3.png" alt="Tienda Virtual 2">
+                            <img src="imgs/ecommerce4.png" alt="Tienda Virtual 3">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p>E-Commerce Full responsive con pasarela de pagos incluida. Programado con React, utilizando múltiples tecnologías como Material Ui, Context Api, Firebase, Nodejs, hook de clases useStyles, makeStyles, inline styling, Stripe, Axios y Express entre muchos otros!</p>
+                        <a href="https://github.com/willyPhelan/E-Commerce-2023" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card featured">
+                    <h4>Pokemon App</h4>
+                    <div class="project-img-placeholder" style="background-color: #262c40;">
+                        <div class="project-gallery">
+                            <img src="imgs/Pokemon App.png" alt="Pokemon App 1">
+                            <img src="imgs/PokeApp2.png" alt="Pokemon App 2">
+                            <img src="imgs/PokeApp3.png" alt="Pokemon App 3">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <p>Aplicación de listado de Pokémons consumiendo imágenes de una API y conectada a una Base de Datos SQL desarrollada con C# en .NET.</p>
+                        <a href="https://github.com/willyPhelan/App-Pokemon" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </details>
+    </div>
+</section>
+
+        <!-- ================= 6. REDES ================= -->
+
+        <section id="redes" class="section networks">
+
+            <div class="container text-center">
+
+                
+
+                <div class="social-icons">
+
+                    <!-- LinkedIn -->
+
+                    <a href="https://www.linkedin.com/in/guillermo-phelan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  
+                    </a>
+                  
+                    <!-- GitHub -->
+
+                    <a href="https://github.com/willyPhelan" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                   
+                    </a>
+                 
+
+                    <!-- Email -->
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phelanguille@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" class="social-icon">
+                
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+
+                    </a
+
+                    <!-- WhatsApp (El número NO aparece escrito en texto visible) -->
+
+                    <a href="https://wa.me/5491150053715" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+
+                </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= 7. FORMULARIO DE CONTACTO ================= -->
+
+        <section id="contacto" class="section contact">
+
+            <div class="container">
+
+                <h2 class="section-title text-center"> Contacto </h2>
+
+                <!-- Formulario sin JS apuntando a Formspree -->
+                <form action="https://formspree.io/f/TU_ID" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="tucorreo@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                </form>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>&copy; 2026 Guillermo Phelan</p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

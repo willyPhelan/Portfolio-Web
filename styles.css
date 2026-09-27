@@ -1,0 +1,574 @@
+/* ================= VARIABLES & RESET ================= */
+:root {
+
+    --color-fondo: #0f172a;               /* Slate 900 */
+    --color-card: rgba(30, 41, 59, 0.85); /* Tarjetas translúcidas */
+    --color-texto: #f8fafc;               /* Slate 50 */
+    --color-texto-muted: #94a3b8;         /* Slate 400 */
+    --color-acento: #7c3aed;              /* Violet 600 (.NET vibe) */
+    --color-acento-hover: #6d28d9;        /* Violet 700 */
+    --color-borde: rgba(51, 65, 85, 0.6); /* Slate 700 semitransparente */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= FONDO ANIMADO CON MOVIMIENTO REAL ================= */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Orbes flotantes animados en el fondo */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: -1;
+    opacity: 0.45;
+    animation: flotarFormas 12s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+body::before {
+    background: #7c3aed;
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    background: #3b82f6;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -6s;
+}
+
+@keyframes flotarFormas {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(200px, 150px) scale(1.25);
+    }
+    100% {
+        transform: translate(80px, 300px) scale(0.9);
+    }
+}
+
+/* ================= NAVEGACIÓN ================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+nav, .nav-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center; /* Cambiado de space-between a center */
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+nav ul, .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-texto-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--color-texto);
+}
+
+/* Ocultamos el checkbox del sistema en todas las vistas */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none; /* Se oculta por defecto en escritorio */
+}
+
+/* ================= CONTENEDORES Y SECCIONES ================= */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section, .hero {
+    background: var(--color-card);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-borde);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= SECCIÓN HERO (Foto y Texto Ordenados) ================= */
+.hero, .hero-container, section:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.hero img, .profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-acento);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.4);
+    flex-shrink: 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+/* ================= TIPOGRAFÍA Y BOTONES ================= */
+h1, h2, h3 {
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--color-texto-muted);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-acento-hover);
+}
+
+.btn, button, .cta-button {
+    display: inline-block;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4);
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn:hover, button:hover, .cta-button:hover {
+    background-color: var(--color-acento-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
+}
+
+/* ================= RESPONSIVE NAVBAR (Menú Hamburguesa) ================= */
+@media (max-width: 767px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-texto);
+        transition: var(--transition);
+    }
+
+    /* El menú se oculta fuera de la pantalla a la derecha */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s ease-in-out;
+        z-index: 1050;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+    }
+
+    /* ACCIÓN DEL CHECKBOX: Cuando se hace clic en la hamburguesa, el menú se desliza hacia la pantalla */
+    .menu-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+
+    /* Animación del ícono de hamburguesa convirtiéndose en una "X" */
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+.hero, .hero-container, section:first-of-type {
+    /* Si ya tenías display: flex aquí, no lo borres, 
+       pero asegúrate de que la dirección sea columna */
+    display: flex;
+    flex-direction: column; /* Apila imagen y texto verticalmente */
+    align-items: center;    /* Centra todo horizontalmente */
+    text-align: center;     /* Centra el texto también */
+    gap: 1.5rem;            /* Espacio entre la imagen y el texto */
+}
+
+/* 2. Modificamos el contenedor de la imagen para que no fuerce alineación lateral */
+.hero-imagen {
+    display: flex;
+    justify-content: center; /* Centra la etiqueta <img> dentro de su div */
+    width: 100%;             /* Ocupa todo el ancho disponible */
+}
+
+/* 3. Aseguramos que la imagen sea un bloque para que los márgenes funcionen */
+.profile-img {
+    display: block;
+    margin-left: auto;  /* Automático para centrar */
+    margin-right: auto; /* Automático para centrar */
+    
+    /* Opcional: si quieres asegurarte que no se mueva */
+    float: none; 
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;       /* Si son muchos, bajan solos prolijamente */
+    gap: 1.5rem;           /* Espacio entre cada logo */
+    align-items: center;   /* Los alinea verticalmente al medio */
+    justify-content: flex-start; /* O center si los querés centrados */
+    margin-top: 1rem;
+}
+
+/* Control estricto del tamaño de cada logo */
+.tech-logo {
+    width: 48px;           /* Ancho fijo o controlado */
+    height: 48px;          /* Alto fijo para que sean cuadrados uniformes */
+    object-fit: contain;   /* Evita que la imagen se deforme o estire */
+    transition: transform 0.3s ease; /* Un detalle copado de animación al pasar el mouse */
+}
+
+/* Opcional: un pequeño efecto hover para darle vida */
+.tech-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Cambiá esto en tu CSS */
+.project-card img, .project-img-placeholder img {
+    width: 100%;
+    max-height: 200px;     
+    object-fit: contain;   /* <--- ESTO ES LO CLAVE: Cambiar 'cover' por 'contain' */
+    display: block;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 10px;               /* Espacio entre cada captura */
+    overflow-x: auto;        /* Permite hacer scroll horizontal si no entran en pantallas chicas */
+    width: 100%;
+    padding: 10px;
+    justify-content: center; /* Las centra si hay espacio libre */
+}
+
+/* Estilo para cada miniatura o captura dentro de la galería */
+.project-gallery img {
+    width: calc(33.333% - 10px); /* Divide el ancho en 3 columnas iguales */
+    max-height: 200px;           /* Altura controlada */
+    object-fit: contain;         /* Mantiene la proporción sin recortar */
+    border-radius: 6px;
+    background-color: #1a1f2c;   /* Un fondo sutil para cada imagen si lo deseas */
+}
+
+
+.redes-icons, .social-container, social-icons { /* Ajusta el nombre de la clase según cómo lo tengas en tu HTML */
+    display: flex;
+    justify-content: space-between; /* Esto los estira para ocupar todo el ancho disponible */
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem; /* Opcional: un pequeño margen interno para que no peguen contra los bordes */
+}
+
+.social-icons {
+
+    display: flex;
+    justify-content: space-between; /* Distribuye los íconos abarcando todo el ancho */
+    align-items: center;
+    width: 100%;
+}
+
+.social-icons a, .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* =============================================
+   ESTILOS MODERNOS PARA EL FORMULARIO DE CONTACTO
+   ============================================= */
+
+/* Contenedor principal de la tarjeta de contacto (si usás una clase tipo .contact-card o .section) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Agrupamiento de cada campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+}
+
+/* Etiquetas (Labels) */
+.form-group label {
+    font-size: 0.95rem;
+    color: #c7d2fe; /* Un tono claro azulado/violáceo acorde a tu paleta */
+    font-weight: 500;
+}
+
+/* Inputs y Textareas con bordes violetas y diseño moderno */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background-color: #1e1b4b; /* Fondo oscuro sutilmente violáceo */
+    border: 2px solid #6d28d9;  /* Borde violeta moderno */
+    border-radius: 12px;       /* Bordes redondeados */
+    color: #ffffff;            /* Texto blanco al escribir */
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic o escribe en el input (Focus) */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #a78bfa;     /* Un violeta más brillante al enfocar */
+    box-shadow: 0 0 10px rgba(167, 139, 250, 0.4); /* Brillo neón suave acorde al portfolio */
+}
+
+/* Placeholder (texto de guía dentro del input) */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    opacity: 0.7;
+}
+
+/* Botón de enviar estilizado */
+.contact-form .btn-primary {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5); /* Degradé violeta/azul */
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.contact-form .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px); /* Pequeño efecto de elevación al pasar el mouse */
+}
+
+/* Estilos para el menú desplegable de Proyectos */
+.projects-dropdown {
+    width: 100%;
+}
+
+/* Botón desplegable con estilo acorde al sitio */
+.dropdown-toggle-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1b4b, #2e1065);
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid #6d28d9;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    list-style: none; /* Oculta la flecha por defecto del navegador */
+}
+
+/* Ocultar la flecha por defecto en navegadores webkit */
+.dropdown-toggle-btn::-webkit-details-marker {
+    display: none;
+}
+
+/* Efecto hover al pasar el cursor sobre el botón */
+.dropdown-toggle-btn:hover {
+    border-color: #a78bfa;
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.3);
+}
+
+/* Animación de rotación para la flechita cuando se abre */
+.projects-dropdown[open] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+    color: #a78bfa;
+}
+
+/* Contenedor principal de la tarjeta de presentación */
+.hero-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px; /* Mantiene los bordes redondeados de tus tarjetas */
+    border: 2px solid #6d28d9; /* El borde violeta característico de tu diseño */
+    background-color: solid #0f172a;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* Configuración del video para que cubra todo el fondo de la tarjeta */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Capa oscura superpuesta (Overlay) para contraste */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85); /* Ajustá el último valor (0.85) si querés más o menos oscuridad */
+    z-index: 2;
+}
+
+/* Asegura que todo el contenido esté por encima del video y la capa oscura */
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* 1. Hacemos que el video en sí sea traslúcido (probá bajando o subiendo este valor entre 0.3 y 0.6) */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.4; /* <--- ¡Este es el secreto! Valor menor = más transparente (se mezcla más) */
+
+
+    /* Efecto de desvanecimiento hacia abajo */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* 2. Ajustamos la capa oscura para que actúe como unificador del fondo */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Poné el color de fondo base de tu sitio (ej: #0b0f19) y un alfa de 0.85 para unificar */
+    background: rgba(11, 15, 25, 0.85); 
+    z-index: -1;
+}
+
+.hero-card, .hero-content {
+    background-color: #0b0f19; /* Un color oscuro sólido que tape el video por completo */
+    border-radius: 16px;       /* Bordes redondeados */
+    padding: 2.5rem;
+}
