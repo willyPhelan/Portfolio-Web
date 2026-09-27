@@ -43,15 +43,18 @@
 
                 <li><a href="#sobre-mi">Sobre mí</a></li>
 
-                <li><a href="#conocimientos">Conocimientos</a></li>
-
                 <li><a href="#proyectos">Proyectos</a></li>
 
-                <li><a href="#redes">Redes</a></li>
-
                 <li><a href="#contacto">Contacto</a></li>
+
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"> 🌙 </button></li>
+
             </ul>
+
         </nav>
+
+
+        
     </header>
 
     <main>
@@ -110,22 +113,32 @@
                 <!-- Datos rápidos -->
                 <div class="about-grid">
 
-                    <div class="info-card">
+                <div class="info-item">
+                    
+                    <span class="info-label">Buenos Aires,</span>
+   
+                    <span class="info-value">Argentina</span>
 
-                        <h3> 🗺️ Buenos Aires, Argentina </h3>
-               
+                </div>
 
-                    </div>
+                 <div class="info-item">
+                    
+                    <span class="info-label">🗣️ Idiomas:</span>
+   
+                    <span class="info-value">Español - Inglés C2</span>
 
-                    <div class="info-card">
+                </div>
 
-                        <h3>🗣️ Idiomas: Español - Inglés C2 </h3>
+                 <div class="info-item">
+                    
+                    <span class="info-label"> 🎓 Educación: Técnico  Universitario en Programación </span>
+   
+                    <span class="info-value"> Universidad Tecnológica Nacional FRGP </span>
 
-                    </div>
+                </div>
 
-                    <div class="info-card">
-
-                        <h3>🎓 Educación: Universidad Tecnológica Nacional FRGP - Técnico  Universitario en Programación </h3>
+                
+                   
                  
                     </div>
                
@@ -144,8 +157,13 @@
               
               <div class="skills-card">
 
-                <h2> Skills </h2>
                 
+                 <div class="info-item">
+                    
+                    <h4 class="info-label"> Skills: </h4
+                        >    
+
+                </div>
               
                 <div class="tech-icons">
 
@@ -352,18 +370,27 @@
 
             <div class="container">
 
-                <h2 class="section-title text-center"> Contacto </h2>
+                <h2 class="section-title text-center info-label"> Dejame tu mensaje </h2>
 
                 <!-- Formulario sin JS apuntando a Formspree -->
-                <form action="https://formspree.io/f/TU_ID" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/xkjgpkjo" method="POST" class="contact-form">
+
                     <div class="form-group">
+
                         <label for="nombre">Nombre</label>
+
                         <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
                     </div>
+
                     <div class="form-group">
+
                         <label for="email">Email</label>
+
                         <input type="email" id="email" name="email" required placeholder="tucorreo@email.com">
+
                     </div>
+                    
                     <div class="form-group">
                         <label for="asunto">Asunto</label>
                         <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
@@ -392,6 +419,37 @@
         </div>
 
     </footer>
+
+    
+    <script>
+    const themeToggle = document.getElementById("theme-toggle");
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-theme");
+
+        if (document.body.classList.contains("light-theme")) {
+            themeToggle.textContent = "☀️";
+            themeToggle.setAttribute("aria-label", "Cambiar a tema oscuro");
+            localStorage.setItem("theme", "light");
+        } else {
+            themeToggle.textContent = "🌙";
+            themeToggle.setAttribute("aria-label", "Cambiar a tema claro");
+            localStorage.setItem("theme", "dark");
+        }
+
+    });
+
+
+    // Recuperar el tema elegido anteriormente
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+        document.body.classList.add("light-theme");
+        themeToggle.textContent = "☀️";
+        themeToggle.setAttribute("aria-label", "Cambiar a tema oscuro");
+    }
+</script>
 
 
 </body>

@@ -572,3 +572,31 @@ a:hover {
     border-radius: 16px;       /* Bordes redondeados */
     padding: 2.5rem;
 }
+
+/* Contenedor general de la info de esta tarjeta */
+.info-item {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Etiqueta (ej: "Idiomas:") en un gris más oscuro y elegante */
+.info-label {
+    color: #cbd5e1; /* Slate 300: un gris claro bien legible *//* Slate 500: un gris intermedio/oscuro muy moderno */
+    font-weight: 600;
+}
+
+/* El contenido (ej: "Español - Inglés C2") en un gris más claro para destacar */
+.info-value {
+    color: #64748b ;  /* Slate 300: un gris claro bien legible */
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* Ajustá este valor (ej. 80px o 100px) según la altura de tu header */
+}
+
