@@ -25,10 +25,6 @@ body.light-theme header {
     background: rgba(224, 242, 254, 0.85);
 }
 
-body.light-theme .theme-toggle {
-    background: rgba(255, 255, 255, 0.9);
-}
-
 body.light-theme .form-group input,
 body.light-theme .form-group textarea {
     background-color: #f0f9ff;
@@ -62,11 +58,11 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
-    user-select: none; /* Evita que se seleccione texto o aparezca la barra de cursor al hacer clic accidentalmente */
+    user-select: none;
 }
 
-/* Permitir seleccionar texto solo dentro de párrafos, títulos o inputs explícitos */
-p, h1, h2, h3, h4, span, a, input, textarea {
+/* Permitir la selección de texto y la barra de cursor únicamente en inputs y textareas */
+input, textarea {
     user-select: text;
 }
 
@@ -80,7 +76,7 @@ body::before, body::after {
     z-index: -1;
     opacity: 0.45;
     animation: flotarFormas 12s ease-in-out infinite alternate;
-    pointer-events: none; /* Evita que bloqueen clics */
+    pointer-events: none;
 }
 
 body::before {
@@ -139,6 +135,7 @@ nav ul, .nav-links {
     gap: 1.5rem;
     align-items: center;
     margin: 0 auto;
+    transform: translateX(58px);
 }
 
 nav a {
@@ -160,28 +157,47 @@ nav a:hover {
     display: none;
 }
 
-/* ================= BOTÓN DE TEMA ================= */
+/* ================= CONTROLES (IDIOMA Y TEMA) ================= */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-toggle,
 .theme-toggle,
+body.light-theme .lang-toggle,
 body.light-theme .theme-toggle {
-    background: none !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 0.2rem !important;
+    padding: 0.4rem 0.6rem !important;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    transition: transform 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-texto-muted);
+    transition: var(--transition);
 }
 
+.theme-toggle {
+    font-size: 1.2rem;
+    padding: 0.2rem !important;
+}
+
+.lang-toggle:hover,
 .theme-toggle:hover,
+body.light-theme .lang-toggle:hover,
 body.light-theme .theme-toggle:hover {
-    background: none !important;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    transform: scale(1.15);
+    color: var(--color-texto);
+    transform: scale(1.1);
 }
+
 /* ================= CONTENEDORES Y SECCIONES ================= */
 main {
     max-width: 1100px;
@@ -209,6 +225,10 @@ section, .hero {
     gap: 1.5rem;
 }
 
+.hero {
+    background: var(--color-card);
+}
+
 .hero img, .profile-img {
     width: 180px;
     height: 180px;
@@ -224,6 +244,8 @@ section, .hero {
     flex: 1;
     position: relative;
     z-index: 3;
+    width: 100%;
+    background: transparent;
 }
 
 h1, h2, h3, h4 {
@@ -428,7 +450,6 @@ a:hover {
     opacity: 0.4;
     pointer-events: none;
 
-    /* Efecto de desvanecimiento (fade-out) hacia abajo */
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
 }
@@ -462,11 +483,15 @@ a:hover {
     font-weight: 400;
 }
 
+body.light-theme .hero {
+    background-color: rgba(224, 242, 254, 0.95);
+}
+
 body.light-theme .hero-content {
-    background-color: rgba(224, 242, 254, 0.95); /* Fondo celeste claro sólido para el modo claro */
+    background-color: transparent;
 }
 
 body.light-theme .hero-overlay {
-    background: #e0f2fe; /* Fondo sólido claro */
+    background: #e0f2fe;
     opacity: 0.92;
 }

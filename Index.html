@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es" id="html-root">
 
 <head>
 
@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio Web de Guillermo Phelan </title>
+    <title data-lang-es="Portfolio Web de Guillermo Phelan" data-lang-en="Guillermo Phelan Web Portfolio">Portfolio Web de Guillermo Phelan </title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -21,8 +21,6 @@
     <header class="header">
 
         <nav class="nav-container">
-
-          <!----  <a href="#inicio" class="logo">Guillermo Phelan - Desarrollador FullStack</a> -->
 
             <!-- Checkbox oculto para el menú hamburguesa puramente en CSS -->
 
@@ -39,22 +37,20 @@
             </label>
 
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#inicio" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
 
-                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#sobre-mi" data-lang-es="Sobre mí" data-lang-en="About me">Sobre mí</a></li>
 
-                <li><a href="#contacto">Contacto</a></li>
-
-                
+                <li><a href="#contacto" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
 
             </ul>
 
-            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"> 🌙 </button>
+            <div class="nav-controls">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma / Change language">EN</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"> 🌙 </button>
+            </div>
 
         </nav>
-
-       
-
         
     </header>
 
@@ -68,7 +64,7 @@
 
         <source src="vids/videoprog.mp4" type="video/mp4">
 
-        Tu navegador no soporta videos HTML5.
+        <span data-lang-es="Tu navegador no soporta videos HTML5." data-lang-en="Your browser does not support HTML5 videos.">Tu navegador no soporta videos HTML5.</span>
   
     </video>
 
@@ -88,15 +84,16 @@
 
             <h1>Guillermo Phelan</h1>
 
-            <h2> Desarrollador Fullstack </h2>
+            <h2 data-lang-es="Desarrollador Fullstack" data-lang-en="Fullstack Developer"> Desarrollador Fullstack </h2>
 
-            <p>Sumergido en el mundo del desarrollo de software, cuento con una sólida base técnica en C++, C#, JavaScript y SQL, respaldada por mi formación universitaria en programación. Combino los fundamentos de la ingeniería de software con las tecnologías más demandadas del mercado para construir aplicaciones robustas y de alto rendimiento. Te invito a explorar mis proyectos y habilidades; ¡Construyamos grandes cosas juntos!</p>
+            <p data-lang-es="Sumergido en el mundo del desarrollo de software, cuento con una sólida base técnica en C++, C#, JavaScript y SQL, respaldada por mi formación universitaria en programación. Combino los fundamentos de la ingeniería de software con las tecnologías más demandadas del mercado para construir aplicaciones robustas y de alto rendimiento. Te invito a explorar mis proyectos y habilidades;" data-lang-en="Immersed in the world of software development, I have a solid technical foundation in C++, C#, JavaScript, and SQL, backed by my university degree in programming. I combine software engineering fundamentals with the market's most in-demand technologies to build robust, high-performance applications. I invite you explore my projects and skills;">Sumergido en el mundo del desarrollo de software, cuento con una sólida base técnica en C++, C#, JavaScript y SQL, respaldada por mi formación universitaria en programación. Combino los fundamentos de la ingeniería de software con las tecnologías más demandadas del mercado para construir aplicaciones robustas y de alto rendimiento. Te invito a explorar mis proyectos y habilidades; </p>
+            <p data-lang-es=" ¡Construyamos grandes cosas juntos!" data-lang-en=" Let's build great things together!"> ¡Construyamos grandes cosas juntos! </p>
             
             <div class="hero-buttons">
 
-                <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                <a href="#proyectos" class="btn btn-primary" data-lang-es="Ver proyectos" data-lang-en="View projects">Ver proyectos</a>
 
-                <a href="docs/Guillermo Phelan DEV 2026-06.pdf" class="btn btn-secondary" download>Descargar CV</a>
+                <a href="docs/Guillermo Phelan DEV 2026-06.pdf" class="btn btn-secondary" download data-lang-es="Descargar CV" data-lang-en="Download Resume">Descargar CV</a>
 
             </div>
         </div>
@@ -110,7 +107,6 @@
 
             <div class="container">
               
-
                 <!-- Datos rápidos -->
                 <div class="about-grid">
 
@@ -124,22 +120,19 @@
 
                  <div class="info-item">
                     
-                    <span class="info-label">🗣️ Idiomas:</span>
+                    <span class="info-label" data-lang-es="🗣️ Idiomas:" data-lang-en="🗣️ Languages:">🗣️ Idiomas:</span>
    
-                    <span class="info-value">Español - Inglés C2</span>
+                    <span class="info-value" data-lang-es="Español - Inglés C2" data-lang-en="Spanish - English C2">Español - Inglés C2</span>
 
                 </div>
 
                  <div class="info-item">
                     
-                    <span class="info-label"> 🎓 Educación: Técnico  Universitario en Programación </span>
+                    <span class="info-label" data-lang-es=" 🎓 Educación: Técnico Universitario en Programación " data-lang-en=" 🎓 Education: University Programming Technician "> 🎓 Educación: Técnico  Universitario en Programación </span>
    
                     <span class="info-value"> Universidad Tecnológica Nacional FRGP </span>
 
                 </div>
-
-                
-                   
                  
                     </div>
                
@@ -154,15 +147,12 @@
         <section id="conocimientos" class="section skills">
 
             <div class="container">
-
               
               <div class="skills-card">
-
                 
                  <div class="info-item">
                     
-                    <h4 class="info-label"> Skills: </h4
-                        >    
+                    <h4 class="info-label"> Skills: </h4>    
 
                 </div>
               
@@ -195,16 +185,10 @@
 
                     <img src="https://brandlogos.net/wp-content/uploads/2025/10/docker_mark-logo_brandlogos.net_yetav-512x404.png" alt="Node.js" class="tech-logo">
 
-
                 </div>
         
             </div>
-
                    
-                    </div>
-                    
-                    
-                </div>
             </div>
 
         </section>
@@ -221,7 +205,7 @@
 
             <summary class="dropdown-toggle-btn">
 
-                <span>Ver proyectos destacados </span>
+                <span data-lang-es="Ver proyectos destacados" data-lang-en="View featured projects">Ver proyectos destacados </span>
 
                 <span class="arrow-icon">&#9660;</span>
 
@@ -251,21 +235,18 @@
 
                     <div class="project-info">
                     
-                        <p>App clon de Spotify utilizando REACT, Material UI, Styled components, Redux y llamadas a la API para darle funcionalidad.</p>
+                        <p data-lang-es="App clon de Spotify utilizando REACT, Material UI, Styled components, Redux y llamadas a la API para darle funcionalidad." data-lang-en="Spotify clone app built using REACT, Material UI, Styled components, Redux, and API calls for full functionality.">App clon de Spotify utilizando REACT, Material UI, Styled components, Redux y llamadas a la API para darle funcionalidad.</p>
                         
-                        <a href="https://github.com/willyPhelan/Spotify-Clon_React-Redux" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                        <a href="https://github.com/willyPhelan/Spotify-Clon_React-Redux" target="_blank" rel="noopener noreferrer" class="btn-link" data-lang-es="Ver en GitHub &rarr;" data-lang-en="View on GitHub &rarr;">Ver en GitHub &rarr;</a>
                     
                     </div>
                
                 </article>
-
-              
               
                 <!-- Proyecto 2 -->
 
-
                 <article class="project-card featured">
-                    <h4>Mercado Libre Clone</h4>
+                    <h4 data-lang-es="Mercado Libre Clone" data-lang-en="Mercado Libre Clone">Mercado Libre Clone</h4>
                     <div class="project-img-placeholder" style="background-color: #262c40;">
                         <div class="project-gallery">
                             <img src="imgs/ClonMeli.png" alt="Mercado Libre 1">
@@ -274,14 +255,14 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <p>Clon de la página de Mercado Libre donde muestra un producto con su precio, detalles, información del vendedor, barra de navegación y más. Desarrollada a partir del desafío planteado por reclutadores de la empresa para postulantes al puesto de desarrollador Front-End.</p>
-                        <a href="https://github.com/willyPhelan/Clon-Mercado-Libre" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                        <p data-lang-es="Clon de la página de Mercado Libre donde muestra un producto con su precio, detalles, información del vendedor, barra de navegación y más. Desarrollada a partir del desafío planteado por reclutadores de la empresa para postulantes al puesto de desarrollador Front-End." data-lang-en="Mercado Libre website clone showcasing a product with its price, details, seller info, navigation bar, and more. Developed based on the challenge set by company recruiters for Front-End developer applicants.">Clon de la página de Mercado Libre donde muestra un producto con su precio, detalles, información del vendedor, barra de navegación y más. Desarrollada a partir del desafío planteado por reclutadores de la empresa para postulantes al puesto de desarrollador Front-End.</p>
+                        <a href="https://github.com/willyPhelan/Clon-Mercado-Libre" target="_blank" rel="noopener noreferrer" class="btn-link" data-lang-es="Ver en GitHub &rarr;" data-lang-en="View on GitHub &rarr;">Ver en GitHub &rarr;</a>
                     </div>
                 </article>
 
                 <!-- Proyecto 3 -->
                 <article class="project-card featured">
-                    <h4>Tienda Virtual</h4>
+                    <h4 data-lang-es="Tienda Virtual" data-lang-en="Virtual Store">Tienda Virtual</h4>
                     <div class="project-img-placeholder" style="background-color: #262c40;">
                         <div class="project-gallery">
                             <img src="imgs/ecommerce.png" alt="Tienda Virtual 1">
@@ -290,8 +271,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <p>E-Commerce Full responsive con pasarela de pagos incluida. Programado con React, utilizando múltiples tecnologías como Material Ui, Context Api, Firebase, Nodejs, hook de clases useStyles, makeStyles, inline styling, Stripe, Axios y Express entre muchos otros!</p>
-                        <a href="https://github.com/willyPhelan/E-Commerce-2023" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                        <p data-lang-es="E-Commerce Full responsive con pasarela de pagos incluida. Programado con React, utilizando múltiples tecnologías como Material Ui, Context Api, Firebase, Nodejs, hook de clases useStyles, makeStyles, inline styling, Stripe, Axios y Express entre muchos otros!" data-lang-en="Fully responsive E-Commerce with an included payment gateway. Coded with React, utilizing multiple technologies such as Material UI, Context API, Firebase, Node.js, useStyles hook, makeStyles, inline styling, Stripe, Axios, and Express among many others!">E-Commerce Full responsive con pasarela de pagos incluida. Programado con React, utilizando múltiples tecnologías como Material Ui, Context Api, Firebase, Nodejs, hook de clases useStyles, makeStyles, inline styling, Stripe, Axios y Express entre muchos otros!</p>
+                        <a href="https://github.com/willyPhelan/E-Commerce-2023" target="_blank" rel="noopener noreferrer" class="btn-link" data-lang-es="Ver en GitHub &rarr;" data-lang-en="View on GitHub &rarr;">Ver en GitHub &rarr;</a>
                     </div>
                 </article>
 
@@ -306,8 +287,8 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <p>Aplicación de listado de Pokémons consumiendo imágenes de una API y conectada a una Base de Datos SQL desarrollada con C# en .NET.</p>
-                        <a href="https://github.com/willyPhelan/App-Pokemon" target="_blank" rel="noopener noreferrer" class="btn-link">Ver en GitHub &rarr;</a>
+                        <p data-lang-es="Aplicación de listado de Pokémons consumiendo imágenes de una API y conectada a una Base de Datos SQL desarrollada con C# en .NET." data-lang-en="Pokémon listing application consuming images from an API and connected to an SQL database developed with C# in .NET.">Aplicación de listado de Pokémons consumiendo imágenes de una API y conectada a una Base de Datos SQL desarrollada con C# en .NET.</p>
+                        <a href="https://github.com/willyPhelan/App-Pokemon" target="_blank" rel="noopener noreferrer" class="btn-link" data-lang-es="Ver en GitHub &rarr;" data-lang-en="View on GitHub &rarr;">Ver en GitHub &rarr;</a>
                     </div>
                 </article>
 
@@ -321,8 +302,6 @@
         <section id="redes" class="section networks">
 
             <div class="container text-center">
-
-                
 
                 <div class="social-icons">
 
@@ -342,16 +321,15 @@
                    
                     </a>
                  
-
                     <!-- Email -->
 
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=phelanguille@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" class="social-icon">
                 
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
 
-                    </a
+                    </a>
 
-                    <!-- WhatsApp (El número NO aparece escrito en texto visible) -->
+                    <!-- WhatsApp -->
 
                     <a href="https://wa.me/5491150053715" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
 
@@ -371,16 +349,16 @@
 
             <div class="container">
 
-                <h2 class="section-title text-center info-label"> Dejame tu mensaje </h2>
+                <h2 class="section-title text-center info-label" data-lang-es="Dejame tu mensaje" data-lang-en="Leave me your message"> Dejame tu mensaje </h2>
 
                 <!-- Formulario sin JS apuntando a Formspree -->
                 <form action="https://formspree.io/f/xkjgpkjo" method="POST" class="contact-form">
 
                     <div class="form-group">
 
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre" data-lang-es="Nombre" data-lang-en="Name">Nombre</label>
 
-                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        <input type="text" id="nombre" name="nombre" required data-lang-es-placeholder="Tu nombre" data-lang-en-placeholder="Your name" placeholder="Tu nombre">
 
                     </div>
 
@@ -393,19 +371,18 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="asunto">Asunto</label>
-                        <input type="text" id="asunto" name="asunto" required placeholder="Motivo del mensaje">
+                        <label for="asunto" data-lang-es="Asunto" data-lang-en="Subject">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required data-lang-es-placeholder="Motivo del mensaje" data-lang-en-placeholder="Subject of the message" placeholder="Motivo del mensaje">
                     </div>
                     <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <label for="mensaje" data-lang-es="Mensaje" data-lang-en="Message">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required data-lang-es-placeholder="Escribe tu mensaje aquí..." data-lang-en-placeholder="Write your message here..." placeholder="Escribe tu mensaje aquí..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                    <button type="submit" class="btn btn-primary btn-block" data-lang-es="Enviar mensaje" data-lang-en="Send message">Enviar mensaje</button>
                 </form>
             </div>
 
         </section>
-
 
     </main>
 
@@ -424,33 +401,66 @@
     
 <script>
     const themeToggle = document.getElementById("theme-toggle");
+    const langToggle = document.getElementById("lang-toggle");
     const profileImg = document.getElementById("profile-img");
+    const htmlRoot = document.getElementById("html-root");
 
-    // Función para actualizar la interfaz del botón y la foto
+    // Función para actualizar la interfaz del tema
+
+
     function updateThemeUI(isLight) {
         if (isLight) {
-            themeToggle.textContent = "☀️";
+            themeToggle.textContent = "🌙"; // En modo claro, muestra la luna para poder cambiar a oscuro
             themeToggle.setAttribute("aria-label", "Cambiar a tema oscuro");
-            // Cambia por la foto que quieras para el tema claro:
             profileImg.src = "imgs/willyBlanco.png"; 
         } else {
-            themeToggle.textContent = "🌙";
+            themeToggle.textContent = "☀️"; // En modo oscuro, muestra el sol para poder cambiar a claro
             themeToggle.setAttribute("aria-label", "Cambiar a tema claro");
-            // Tu foto original para el tema oscuro:
             profileImg.src = "imgs/willy.jpg"; 
         }
     }
 
-    // Evento de clic en el botón
+    // Función para cambiar idioma
+
+    function setLanguage(lang) {
+        htmlRoot.setAttribute("lang", lang);
+        langToggle.textContent = lang === "es" ? "EN" : "ES";
+        
+        // Traducir todos los elementos con atributos data-lang
+        document.querySelectorAll("[data-lang-" + lang + "]").forEach(el => {
+            el.textContent = el.getAttribute("data-lang-" + lang);
+        });
+
+        // Traducir placeholders de inputs y textareas
+        document.querySelectorAll("[data-lang-" + lang + "-placeholder]").forEach(el => {
+            el.placeholder = el.getAttribute("data-lang-" + lang + "-placeholder");
+        });
+
+        // Título de la página
+        const titleEl = document.querySelector("title");
+        if (titleEl && titleEl.getAttribute("data-lang-" + lang)) {
+            titleEl.textContent = titleEl.getAttribute("data-lang-" + lang);
+        }
+
+        localStorage.setItem("lang", lang);
+    }
+
+    // Evento botón tema
     themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("light-theme");
         const isLight = document.body.classList.contains("light-theme");
-        
         updateThemeUI(isLight);
         localStorage.setItem("theme", isLight ? "light" : "dark");
     });
 
-    // Recuperar el tema y la foto guardados al cargar la página
+    // Evento botón idioma
+    langToggle.addEventListener("click", () => {
+        const currentLang = htmlRoot.getAttribute("lang") || "es";
+        const newLang = currentLang === "es" ? "en" : "es";
+        setLanguage(newLang);
+    });
+
+    // Cargar preferencias guardadas al iniciar
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
         document.body.classList.add("light-theme");
@@ -458,8 +468,16 @@
     } else {
         updateThemeUI(false);
     }
+
+    const savedLang = localStorage.getItem("lang") || "es";
+    setLanguage(savedLang);
 </script>
 
+</body>
+
+</html>
+
+</script>
 
 </body>
 
