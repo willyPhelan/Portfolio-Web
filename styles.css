@@ -495,3 +495,42 @@ body.light-theme .hero-overlay {
     background: #e0f2fe;
     opacity: 0.92;
 }
+
+/* Ocultar el botón de cambio de idioma en pantallas pequeñas para evitar superposición */
+@media (max-width: 768px) {
+    /* Reemplaza '.btn-idioma' por la clase o ID exacta que tenga tu botón de idioma */
+    .lang-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ocultar la sección 'Sobre mí' en pantallas chicas */
+    #sobre-mi,
+    .section.about {
+        display: none !important;
+    }
+
+    /* Ocultar el selector de idioma (el botón 'ES' de la barra de navegación) */
+    /* Apunta al elemento que contiene el texto de idioma o el botón de toggle */
+    header .nav-container span:not([class]), /* o la clase exacta que envuelva el cambio de idioma */
+    .nav-container button, 
+    .nav-container .lang-switch {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajusta el contenedor de la barra de navegación */
+    .nav-container {
+        justify-content: center !important; /* Centra los elementos horizontalmente */
+        padding: 0 10px !important;       /* Evita que toquen los bordes extremos */
+        gap: 15px !important;              /* Controla el espacio uniforme entre los enlaces */
+    }
+
+    /* Opcional: ajusta el tamaño de fuente de los enlaces para que entren cómodos */
+    .nav-container a, 
+    .nav-container .nav-link {
+        font-size: 0.9rem !important;
+    }
+}
