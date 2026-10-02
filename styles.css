@@ -526,6 +526,7 @@ body.light-theme .hero-overlay {
         transform: translateX(-15px) !important; /* Ajusta este valor en píxeles si quieres moverlo más o menos a la izquierda */
         margin: 5px !important ;
         margin-left: 30% !important ;
+        display: none ;
     }
 
     /* Aseguramos que el contenedor de la navbar distribuya bien los espacios */
