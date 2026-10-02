@@ -521,16 +521,16 @@ body.light-theme .hero-overlay {
 }
 
 @media (max-width: 768px) {
-    /* Ajusta el contenedor de la barra de navegación */
-    .nav-container {
-        justify-content: center !important; /* Centra los elementos horizontalmente */
-        padding: 0 10px !important;       /* Evita que toquen los bordes extremos */
-        gap: 15px !important;              /* Controla el espacio uniforme entre los enlaces */
+    /* Anulamos el desplazamiento a la derecha y permitimos moverlo a la izquierda */
+    .nav-links {
+        transform: translateX(-15px) !important; /* Ajusta este valor en píxeles si quieres moverlo más o menos a la izquierda */
+        margin: 5px !important ;
+        margin-left: 30% !important ;
     }
 
-    /* Opcional: ajusta el tamaño de fuente de los enlaces para que entren cómodos */
-    .nav-container a, 
-    .nav-container .nav-link {
-        font-size: 0.9rem !important;
+    /* Aseguramos que el contenedor de la navbar distribuya bien los espacios */
+    .nav-container {
+        justify-content: space-between !important;
+        padding: 0 15px !important;
     }
 }
